@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-           stage('Build') {
+           stage('get code') {
             steps {
                 // Get code from a GitHub repository
-               git branch: 'main', url: 'https://github.com/Alaahamdii/stage-spring-boot'
+               git branch: 'main', url: 'https://github.com/Alaahamdii/DevOpsProject.git'
                 }
             }
 
