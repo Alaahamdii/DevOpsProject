@@ -6,11 +6,7 @@ pipeline {
             steps {
                 // Get code from a GitHub repository
                git branch: 'main', url: 'https://github.com/Alaahamdii/stage-spring-boot'
-            }
-            steps {
-                sh script "mvn clean install"
                 }
-
             }
 
         stage('Backend Build and Deploy') {
