@@ -12,7 +12,7 @@ pipeline {
         stage('Backend Build and Deploy') {
             steps {
                 // Build and deploy the backend
-                sh 'backend-build-and-deploy-command'
+                sh script 'mvn clean install'
             }
         }
 
