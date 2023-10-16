@@ -11,7 +11,7 @@ pipeline {
 
         stage('Backend Build and Deploy') {
             steps {
-                // Build and deploy the backend
+                // Build the backend
                 sh script 'mvn clean install'
             }
         }
