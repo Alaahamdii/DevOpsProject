@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkoutt') {
+        stage('Hello') {
             steps {
                 // Checkout source code
-                checkout scm
+                echo "Hello world"
             }
         }
 
@@ -13,13 +13,6 @@ pipeline {
             steps {
                 // Build the backend
                 sh script 'mvn clean install'
-            }
-        }
-
-        stage('Frontend Build and Deploy') {
-            steps {
-                // Build and deploy the frontend
-                sh 'frontend-build-and-deploy-command'
             }
         }
     }
