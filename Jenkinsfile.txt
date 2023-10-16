@@ -2,17 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+           stage('Build') {
             steps {
-                // Checkout source code
-                echo "Hello world"
+                // Get code from a GitHub repository
+               git branch: 'main', url: 'https://github.com/Alaahamdii/stage-spring-boot'
             }
-        }
+            steps {
+                sh script "mvn clean install"
+                }
+
+            }
 
         stage('Backend Build and Deploy') {
             steps {
                 // Build the backend
-                sh script 'mvn clean install'
+                //sh script 'mvn clean install'
+                echo "hello"
             }
         }
     }
