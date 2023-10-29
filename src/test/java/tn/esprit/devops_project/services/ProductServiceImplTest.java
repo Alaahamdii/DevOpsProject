@@ -54,6 +54,11 @@ class ProductServiceImplTest {
     @Test
     @DatabaseSetup("/data-set/stock-data.xml")
     void retrieveProduct() {
+
+
+        Exception exeption = assertThrows(NullPointerException.class,() -> {
+            this.productService.retrieveProduct(33L);
+        }) ;
         final Product product = this.productService.retrieveProduct(1L);
         assertEquals("Product 1", product.getTitle());
 

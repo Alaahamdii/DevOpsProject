@@ -92,8 +92,10 @@ class SupplierServiceImplTest {
     @Test
     @DatabaseSetup("/data-set/invoices-data.xml")
     void retrieveSupplier() {
+        Exception exeption = assertThrows(IllegalArgumentException.class,() -> {
+            final Supplier supplier  = this.supplierService.retrieveSupplier(111L);
+        }) ;
         final Supplier supplier  = this.supplierService.retrieveSupplier(1L);
         assertEquals("SUP001", supplier.getCode());
     }
-
 }
