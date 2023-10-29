@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dataset>
+
+    <supplier
+            id_supplier = "1"
+            code="SUP001"
+            label="Supplier A"
+            supplier_category="BOOKS"
+    />
+    <supplier
+            id_supplier = "2"
+            code="SUP002"
+            label="Supplier B"
+            supplier_category="BOOKS"
+    />
+
+    <invoice
+            id_invoice="1"
+            amount_discount="10.0"
+            amount_invoice="100.0"
+            date_creation_invoice="2023-01-01"
+            date_last_modification_invoice="2023-03-10"
+            archived="false"
+            supplier_id_supplier="2"
+    />
+
+    <invoice
+            id_invoice="2"
+            amount_discount="15.0"
+            amount_invoice="105.0"
+            date_creation_invoice="2023-05-01"
+            date_last_modification_invoice="2023-05-10"
+            archived="false"
+            supplier_id_supplier="2"
+    />
+</dataset>
