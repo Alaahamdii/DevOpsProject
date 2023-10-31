@@ -54,7 +54,7 @@ public class InvoiceServiceImpl implements IInvoiceService {
 
 	@Override
 	public void assignOperatorToInvoice(Long idOperator, Long idInvoice) {
-		Invoice invoice = invoiceRepository.findById(idInvoice).orElseThrow(() -> new NullPointerException("Invoice not found"));
+		Invoice invoice = invoiceRepository.findById(idInvoice).orElseThrow(() -> new NullPointerException(INVOICE_NOT_FOUND_ERROR));
 		Operator operator = operatorRepository.findById(idOperator).orElseThrow(() -> new NullPointerException("Operator not found"));
 		operator.getInvoices().add(invoice);
 		operatorRepository.save(operator);

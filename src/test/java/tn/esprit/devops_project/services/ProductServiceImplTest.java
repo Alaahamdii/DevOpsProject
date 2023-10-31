@@ -42,9 +42,7 @@ class ProductServiceImplTest {
         product.setPrice(100.0F);
         product.setQuantity(10);
 
-        Exception exeption = assertThrows(NullPointerException.class,() -> {
-            this.productService.addProduct(product, 120l);
-        }) ;
+        assertThrows(NullPointerException.class,() -> this.productService.addProduct(product, 120l)) ;
         this.productService.addProduct(product, 1l);
 
         assertEquals(this.productService.retreiveAllProduct().size(), 3);
@@ -56,9 +54,7 @@ class ProductServiceImplTest {
     void retrieveProduct() {
 
 
-        assertThrows(NullPointerException.class,() -> {
-            this.productService.retrieveProduct(33L);
-        }) ;
+        assertThrows(NullPointerException.class,() -> this.productService.retrieveProduct(33L)) ;
         final Product product = this.productService.retrieveProduct(1L);
         assertEquals("Product 1", product.getTitle());
 
