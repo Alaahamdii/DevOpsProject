@@ -52,7 +52,7 @@ class StockServiceImplTest {
     @Test
     @DatabaseSetup("/data-set/stock-data.xml")
     void retrieveStock_nullId() {
-        Exception exeption = assertThrows(NullPointerException.class,() -> {
+        assertThrows(NullPointerException.class,() -> {
             final Stock stock = this.stockService.retrieveStock(100L);
         }) ;
     }

@@ -97,7 +97,7 @@ class OperatorServiceImplTest {
     @Test
     @DatabaseSetup("/data-set/operator-data.xml")
     void retrieveOperator_nullId() {
-        Exception exception = assertThrows(NullPointerException.class, () -> {
+        assertThrows(NullPointerException.class, () -> {
             final Operator operator = this.operatorService.retrieveOperator(100L);
 
         });

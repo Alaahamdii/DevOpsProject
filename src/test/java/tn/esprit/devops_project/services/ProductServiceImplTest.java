@@ -56,7 +56,7 @@ class ProductServiceImplTest {
     void retrieveProduct() {
 
 
-        Exception exeption = assertThrows(NullPointerException.class,() -> {
+        assertThrows(NullPointerException.class,() -> {
             this.productService.retrieveProduct(33L);
         }) ;
         final Product product = this.productService.retrieveProduct(1L);

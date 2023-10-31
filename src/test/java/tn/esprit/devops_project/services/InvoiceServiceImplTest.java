@@ -57,7 +57,7 @@ class InvoiceServiceImplTest {
     @Test
     @DatabaseSetup("/data-set/invoices-data.xml")
     void retrieveInvoice() {
-        Exception exeption = assertThrows(NullPointerException.class,() -> {
+        assertThrows(NullPointerException.class,() -> {
            this.invoiceService.retrieveInvoice(33L);
         }) ;
         final Invoice invoice = this.invoiceService.retrieveInvoice(1L);
