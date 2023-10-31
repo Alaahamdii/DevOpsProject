@@ -51,6 +51,7 @@ class InvoiceServiceImplTest {
 
     @Test
     void cancelInvoice() {
+        //a terminer
     }
 
     @Test
@@ -66,19 +67,6 @@ class InvoiceServiceImplTest {
     @Test
     @DatabaseSetup("/data-set/supplier-data.xml")
     void getInvoicesBySupplier() {
-        /*
-        Exception exeption = assertThrows(NullPointerException.class,() -> {
-            this.supplierService.retrieveSupplier(11L);
-        }) ;
-
-
- //       final Supplier supplier = this.supplierService.retrieveSupplier(1L); // Remarque : Utilisez l'ID correct du fournisseur
-        final List<Invoice> invoices= this.invoiceService.getInvoicesBySupplier(1L);
-
-        assertEquals(2, invoices.size());
-
-         */
-
 
         final Supplier supplier = supplierService.retrieveSupplier(1L); // Assurez-vous d'utiliser le bon ID de fournisseur
         final Set<Invoice> invoicesBySupplierSet = supplier.getInvoices();
@@ -92,19 +80,11 @@ class InvoiceServiceImplTest {
 
     @Test
     void assignOperatorToInvoice() {
+        //a terminer
     }
 
     @Test
     void getTotalAmountInvoiceBetweenDates() {
+        //a terminer
     }
-    /*
-    @Test
-    @DatabaseSetup("/data-set/supplier-data.xml")
-    void retrieveInvoice_nullId() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            final Supplier supplier = this.supplierService.retrieveSupplier(141L);
-        });
-    }
-
-     */
 }
