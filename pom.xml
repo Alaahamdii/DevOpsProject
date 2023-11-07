@@ -19,6 +19,8 @@
         <sonar.projectKey>SonarqubeTest1</sonar.projectKey>
     </properties>
 
+
+         
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
