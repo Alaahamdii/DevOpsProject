@@ -9,7 +9,7 @@ pipeline {
                 }
             }
 
-        stage('Backend Build') {
+    stage('Backend Build') {
             steps {
                 // Build the backend
                 //sh script 'mvn clean install'
